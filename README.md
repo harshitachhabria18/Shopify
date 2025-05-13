@@ -18,3 +18,11 @@ Product Bundle Section - A static product bundle with individual prices and a co
 Tabbed Info Section - Three Tabs : Description, Product Information and Shipping Details with visible content and toggle menus.
 Related Products Grid - Grid of 4 related product cards including image, product name, price and badge(New, Popular & Trendy).
 
+**How to run locally?**
+1. Clone the repository
+2. Place all files in a folder with this structure :
+   /project-folder -> index.html (html file)
+   /project-folder -> /css/style.css (css file)
+   /project-folder -> /js/script.js (JavaScript file)
+3. Open `index.html` in any web browser (Chrome, Firefox, Edge, etc.)
+4. No server or build tools needed.
