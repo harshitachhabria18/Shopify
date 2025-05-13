@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+    <header class="sticky-header">
+        <div class="logo-container">
+            <img src="https://logos-world.net/wp-content/uploads/2020/11/Shopify-Symbol.png" alt="Shopify Logo">
+        </div>
+        <div class="topnav">
+            <a href="#" class="active"><i class="fa fa-home"></i> Home</a>
+            <a href="#"><i class="fa fa-box"></i> Products</a>
+            <a href="#"><i class="fa fa-shopping-cart"></i> Cart</a>
+        </div>
+    </header>
+
+
+
+    <!-- Main product container -->
+    <div class="main-product">
+        <!-- Product Title -->
+        <h1 class="product-title">Classic Black Jacket</h1>
+        <!-- Selected Size Label -->
+        <p id="selectedSizeLabel" class="selected-label">Selected Size: L</p>
+        <!-- Image Gallery Section -->
+        <section class="img-gallary">
+            <!-- Main Product Image Display -->
+            <div class="main-image">
+                <img id="mainimg" src="https://global-uploads.webflow.com/5d552994548be47b97db38c2/5ddba7b9fb62492bf3202ccb_93%20(2)%20(2).png" alt="Main Product">
+            </div>
+            <!-- Thumbnail Images (Clicking these changes the main image) -->
+            <div class="thumbnail-image">
+                <img src="https://images.squarespace-cdn.com/content/v1/528f8b33e4b01f2a315145b2/1473165174041-ELTK3U8JIOQRWBV330P7/static1.squarespace-13.jpg" alt="Sub Product 1" onclick="updateMainImage(this)" data-title="Light Blue Shirt">
+                <img src="https://images.pexels.com/photos/9558567/pexels-photo-9558567.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Sub Product 2" onclick="updateMainImage(this)" data-title="Plain Black T-Shirt">
+                <img src="https://media.istockphoto.com/id/137996281/photo/blue-t-shirt.webp?a=1&b=1&s=612x612&w=0&k=20&c=kPtVpyeGfregfpN0-1R1M7t5P9BZ7xl79Yix2uXujlo=" alt="Sub Product 3" onclick="updateMainImage(this)" data-title="Plain Blue T-Shirt">
+                <img src="https://blog.gotstyle.ca/wp-content/uploads/2017/01/Individual-Clothing-Brand9.jpg" alt="Sub Product 4" onclick="updateMainImage(this)" data-title="Plain White T-Shirt">
+                <img src="https://i.pinimg.com/originals/b9/19/02/b91902fb78266b93ff737573acced5d1.jpg" alt="Sub Procuct 5" onclick="updateMainImage(this)" data-title="Plain Gray T-Shirt">
+                <img src="https://images.pexels.com/photos/4210866/pexels-photo-4210866.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Sub Procuct 6" onclick="updateMainImage(this)" data-title="Jeans">
+                <img src="https://images.unsplash.com/photo-1543163521-1bf539c55dd2?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTh8fHNob2VzfGVufDB8fDB8fHww" alt="Sub Procuct 7" onclick="updateMainImage(this)" data-title="Heels">
+                <img src="https://images.unsplash.com/photo-1512374382149-233c42b6a83b?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fHNob2VzfGVufDB8fDB8fHww" alt="Sub Procuct 8" onclick="updateMainImage(this)" data-title="Shoes">
+                <img src="https://images.unsplash.com/photo-1523170335258-f5ed11844a49?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8d2F0Y2h8ZW58MHx8MHx8fDA%3D" alt="Sub Procuct 9" onclick="updateMainImage(this)" data-title="Watch">
+            </div>
+        </section>
+    </div>
+
+    <!-- Product Bundle Section -->
+    <section class="product-bundle">
+        <!-- Section Heading -->
+        <h2>Buy These Together</h2>
+        <!-- Container for Individual Bundle Products -->
+        <div class="bundle-items">
+            <!-- First Product in the Bundle -->
+            <div class="bundle-product">
+                <img src="https://plus.unsplash.com/premium_photo-1671030274122-b6ac34f87b8b?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8YmxhY2slMjBqYWNrZXR8ZW58MHx8MHx8fDA%3D" alt="Product 1">
+                <p>Classic Black Jacket</p>
+                <!-- Price with a data attribute for JS calculation -->
+                <p class="price" data-price="200.50">₹2000.50</p>
+            </div>
+            <!-- Second Product -->
+            <div class="bundle-product">
+                <img src="https://plus.unsplash.com/premium_photo-1718913936342-eaafff98834b?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTN8fHdoaXRlJTIwdHNoaXJ0fGVufDB8fDB8fHww" alt="Product 2">
+                <p>Plain White T-Shirt</p>
+                <!-- Price with data attribute -->
+                <p class="price" data-price="800.75">₹800.75</p>
+            </div>
+            <!-- Third Product -->
+            <div class="bundle-product">
+                <img src="https://plus.unsplash.com/premium_photo-1674828601362-afb73c907ebe?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8Ymx1ZSUyMGRlbmltJTIwamVhbnN8ZW58MHx8MHx8fDA%3D" alt="Product 3">
+                <p>Blue Denim Jeans</p>
+                <!-- Price with data attribute -->
+                <p class="price" data-price="1200.00">₹1200.00</p>
+            </div>
+        </div>
+
+        <!-- Bundle Total Price and Add Button -->
+        <div class="bundle-total">
+            <!-- Total Price (Calculated with JS) -->
+            <strong>Total: ₹<span id="bundleTotal">0.00</span></strong>
+            <!-- Button to Add All Items to Cart -->
+            <button class="bundle-btn">Add Bundle to Cart</button>
+        </div>
+    </section>
+
+
+    <!-- Product Tabs Section (Three Tabs) -->
+    <section class="prod-tabs-three">
+        <!-- Tab Buttons -->
+        <div class="tab-buttons">
+            <!-- Description Tab (Initially Active) -->
+            <button class="tab-btn active" data-tab="description">Description</button>
+             <!-- Product Information Tab -->
+            <button class="tab-btn" data-tab="info">Product Information</button>
+            <!-- Shipping Details Tab -->
+            <button class="tab-btn" data-tab="shipping">Shipping Details</button>
+        </div>
+
+        <!-- Tab Content: Description (Initially Visible) -->
+        <div class="tab-content active" id="description">
+            <p>This is a sleek, modern jacket designed for both comfort and style. Perfect for casual wear or chilly evenings.</p>
+        </div>
+
+        <!-- Tab Content: Product Information (Hidden by default) -->
+        <div class="tab-content" id="info">
+            <ul>
+                <li>Material: 100% Cotton</li>
+                <li>Available Sizes: S, M, L, XL</li>
+                <li>Color Options: Black, Navy, Grey</li>
+            </ul>
+        </div>
+
+        <!-- Tab Content: Shipping Details (Hidden by default) -->
+        <div class="tab-content" id="shipping">
+            <p>Ships within 3-5 business days. Free shipping on orders over $50. International shipping available.</p>
+        </div>
+    </section>
+
+    <!-- Color Options Section -->
+    <div class="color-options">
+        <!-- Label for the color selection -->
+        <label for="color">Color:</label>
+        <!-- Container for Color Swatch Buttons -->
+        <div class="color-swatch-buttons">
+            <!-- Black Color Button -->
+            <button class="color-btn" data-color="Black" data-img="https://global-uploads.webflow.com/5d552994548be47b97db38c2/5ddba7b9fb62492bf3202ccb_93%20(2)%20(2).png" onclick="selectColor(this)" style="background-color: black;"></button>
+            <!-- Gray Color Button -->
+            <button class="color-btn" data-color="Gray" data-img="https://i.pinimg.com/originals/b9/19/02/b91902fb78266b93ff737573acced5d1.jpg" onclick="selectColor(this)" style="background-color: gray;"></button>
+            <!-- Blue Color Button -->
+            <button class="color-btn" data-color="Blue" data-img="https://media.istockphoto.com/id/137996281/photo/blue-t-shirt.webp?a=1&b=1&s=612x612&w=0&k=20&c=kPtVpyeGfregfpN0-1R1M7t5P9BZ7xl79Yix2uXujlo=" onclick="selectColor(this)" style="background-color: #0066cc;"></button>
+        </div>
+    </div>
+
+    <!-- Compare Colours Button Section -->
+    <div class="compare-colours">
+        <!-- Button to open the compare colors modal -->
+        <button class="compare-btn" onclick="openCompareModal()">Compare Colours</button>
+    </div>
+
+
+    <div id="compareModal" class="modal">
+        <div class="modal-content" role="dialog" aria-modal="true" aria-labelledby="compareTitle">
+            <span class="close-btn" onclick="closeCompareModal()" aria-label="Close modal">&times;</span>
+            <h2 id="compareTitle">Compare Colours</h2>
+            <div class="swatch-grid" id="swatchGrid">
+                <!-- Swatches will be inserted dynamically -->
+            </div>
+            <div class="compare-preview" id="comparePreview">
+                <!-- Selected swatches previewed here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Size Selection Section -->
+    <div class="size-options">
+        <!-- Label for size buttons -->
+        <label for="size">Size:</label>
+        <!-- Size Buttons for user selection -->
+        <div class="size-buttons">
+            <!-- Each button represents a clothing size -->
+            <button class="size-btn">S</button>
+            <button class="size-btn">M</button>
+            <button class="size-btn active">L</button>
+            <button class="size-btn">XL</button>
+        </div>
+    </div>
+
+    <!-- Button to Open Size Chart Modal -->
+    <div class="size-chart">
+        <!-- Clicking this opens the modal with sizing details -->
+        <button class="size-chart-btn" onclick="openModal()">Size Chart</button>
+    </div>
+
+    <!-- Size Chart Modal -->
+    <div id="sizeChartModal" class="modal">
+        <!-- Modal content box -->
+        <div class="modal-content" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+        <!-- Close button inside modal (× symbol) -->
+        <span class="close-btn" onclick="closeModal()" aria-label="Close modal">&times;</span>
+        <!-- Modal Title -->
+        <h2 id="modalTitle">Size Chart</h2>
+        <!-- Sizing Table -->
+        <table class="size-chart-table">
+            <thead>
+                <tr>
+                <th>Size</th>
+                <th>Chest (in)</th>
+                <th>Waist (in)</th>
+                <th>Length (in)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Size data rows -->
+                <tr><td>S</td><td>34-36</td><td>28-30</td><td>26</td></tr>
+                <tr><td>M</td><td>38-40</td><td>32-34</td><td>27</td></tr>
+                <tr><td>L</td><td>42-44</td><td>36-38</td><td>28</td></tr>
+                <tr><td>XL</td><td>46-48</td><td>40-42</td><td>29</td></tr>
+            </tbody>
+        </table>
+        </div>
+    </div>
+
+    <!-- Section: Pair Well With -->
+    <section class="pair-well">
+        <h2>Pair Well With</h2>
+        <!-- Horizontally scrolling product carousel -->
+        <div class="pair-carousel">
+            <!-- Each item is a recommended complementary product -->
+            <div class="pair-card">
+                <img src="https://images.unsplash.com/photo-1624378442362-d3247e8126ec?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8YmxhY2slMjBqZWFuc3xlbnwwfHwwfHx8MA%3D%3D" alt="Product 1">
+                <h4>Black Jeans</h4>
+                <p>₹1000</p>
+                <button class="add-btn">Add to Cart</button>
+            </div>
+            <div class="pair-card">
+                <img src="https://images.unsplash.com/photo-1608231387042-66d1773070a5?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8d2hpdGUlMjBzaG9lc3xlbnwwfHwwfHx8MA%3D%3D" alt="Product 2">
+                <h4>White Sneakers</h4>
+                <p>₹2000</p>
+                <button class="add-btn">Add to Cart</button>
+            </div>
+            <div class="pair-card">
+                <img src="https://images.unsplash.com/photo-1664286022075-8e997e95bd17?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8TGVhdGhlciUyMGJlbHR8ZW58MHx8MHx8fDA%3D" alt="Product 3">
+                <h4>Leather Belt</h4>
+                <p>₹500</p>
+                <button class="add-btn">Add to Cart</button>
+            </div>
+            <div class="pair-card">
+                <img src="https://images.unsplash.com/photo-1521369909029-2afed882baee?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8SGF0fGVufDB8fDB8fHww" alt="Product 4">
+                <h4>Cap</h4>
+                <p>₹200</p>
+                <button class="add-btn">Add to Cart</button>
+            </div>
+            <div class="pair-card">
+                <img src="https://images.unsplash.com/photo-1687253946687-a3713aa25b2f?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8ZWFyaW5nc3xlbnwwfHwwfHx8MA%3D%3D" alt="Product 5">
+                <h4>Earings</h4>
+                <p>₹100</p>
+                <button class="add-btn">Add to Cart</button>
+            </div>
+            <div class="pair-card">
+                <img src="https://images.unsplash.com/photo-1705326453292-f3d35cd96514?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fGxvY2tldHxlbnwwfHwwfHx8MA%3D%3D" alt="Product 6">
+                <h4>Locket</h4>
+                <p>₹350</p>
+                <button class="add-btn">Add to Cart</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section: Related Products -->
+    <section class="related-products">
+        <h2>Related Products</h2>
+
+         <!-- Grid layout for related items -->
+        <div class="related-grid">
+            <!-- Each card shows a related product with a badge -->
+            <div class="product-card">
+                <span class="badge new">New</span>
+                <img src="https://images.unsplash.com/photo-1495105787522-5334e3ffa0ef?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8ZGVuaW0lMjBqYWNrZXR8ZW58MHx8MHx8fDA%3D" alt="Product 1">
+                <h3>Stylish Denim Jacket</h3>
+                <p class="price">₹800</p>
+            </div>
+
+            <div class="product-card">
+                <span class="badge popular">Popular</span>
+                <img src="https://images.unsplash.com/photo-1544441892-794166f1e3be?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8d2hpdGUlMjBzbmVha2Vyc3xlbnwwfHwwfHx8MA%3D%3D" alt="Product 2">
+                <h3>White Sneakers</h3>
+                <p class="price">₹2000</p>
+            </div>
+
+            <div class="product-card">
+                <span class="badge trendy">Trendy</span>
+                <img src="https://images.unsplash.com/photo-1681334921874-5bafe8acf433?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8Y2FudmFzJTIwYmFja3BhY2t8ZW58MHx8MHx8fDA%3D" alt="Product 3">
+                <h3>Canvas Backpack</h3>
+                <p class="price">₹2500</p>
+            </div>
+
+            <div class="product-card">
+                <span class="badge new">New</span>
+                <img src="https://images.unsplash.com/photo-1601379327928-bedfaf9da2d0?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8U3dlYXRlcnxlbnwwfHwwfHx8MA%3D%3D" alt="Product 4">
+                <h3>Winter Sweater</h3>
+                <p class="price">₹1500</p>
+            </div>
+        </div>
+    </section>
+
+    <script src="/js/script.js"></script>
+</body>
+</html>
